@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - عيادة الأسنان</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="bg-gray-800 text-white w-64 min-h-screen p-4">
+            <nav>
+                <ul>
+                    <li class="mb-2">
+                        <a href="#dashboard" class="block p-2 hover:bg-gray-700 rounded transition-colors duration-200">
+                            <i class="fas fa-tachometer-alt mr-2"></i> لوحة التحكم
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#services" class="block p-2 hover:bg-gray-700 rounded transition-colors duration-200">
+                            <i class="fas fa-tooth mr-2"></i> الخدمات
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#doctors" class="block p-2 hover:bg-gray-700 rounded transition-colors duration-200">
+                            <i class="fas fa-user-md mr-2"></i> الأطباء
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#appointments" class="block p-2 hover:bg-gray-700 rounded transition-colors duration-200">
+                            <i class="fas fa-calendar-alt mr-2"></i> المواعيد
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#patients" class="block p-2 hover:bg-gray-700 rounded transition-colors duration-200">
+                            <i class="fas fa-user-injured mr-2"></i> المرضى
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#blog" class="block p-2 hover:bg-gray-700 rounded transition-colors duration-200">
+                            <i class="fas fa-blog mr-2"></i> المدونة
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#settings" class="block p-2 hover:bg-gray-700 rounded transition-colors duration-200">
+                            <i class="fas fa-cog mr-2"></i> الإعدادات
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 overflow-y-auto">
+            <header class="bg-white shadow-md rounded-lg p-4 mb-6">
+                <h1 class="text-2xl font-bold text-gray-800">لوحة التحكم</h1>
+            </header>
+
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">نظرة عامة</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h3 class="text-lg font-semibold mb-2">إجمالي المواعيد</h3>
+                        <p class="text-3xl font-bold text-blue-600">150</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h3 class="text-lg font-semibold mb-2">المرضى الجدد</h3>
+                        <p class="text-3xl font-bold text-green-600">25</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h3 class="text-lg font-semibold mb-2">الأطباء</h3>
+                        <p class="text-3xl font-bold text-purple-600">8</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h3 class="text-lg font-semibold mb-2">الإيرادات</h3>
+                        <p class="text-3xl font-bold text-yellow-600">50,000 ر.س</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">إدارة الخدمات</h2>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th class="text-right py-2">اسم الخدمة</th>
+                                <th class="text-right py-2">السعر</th>
+                                <th class="text-right py-2">الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2">تنظيف الأسنان</td>
+                                <td class="py-2">200 ر.س</td>
+                                <td class="py-2">
+                                    <button class="bg-blue-500 text-white px-2 py-1 rounded mr-2">تعديل</button>
+                                    <button class="bg-red-500 text-white px-2 py-1 rounded">حذف</button>
+                                </td>
+                            </tr>
+                            <!-- Add more service rows as needed -->
+                        </tbody>
+                    </table>
+                    <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded">إضافة خدمة جديدة</button>
+                </div>
+            </section>
+
+            <!-- Doctors Section -->
+            <section id="doctors" class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">إدارة الأطباء</h2>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th class="text-right py-2">اسم الطبيب</th>
+                                <th class="text-right py-2">التخصص</th>
+                                <th class="text-right py-2">الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2">د. أحمد محمد</td>
+                                <td class="py-2">جراحة الفم</td>
+                                <td class="py-2">
+                                    <button class="bg-blue-500 text-white px-2 py-1 rounded mr-2">تعديل</button>
+                                    <button class="bg-red-500 text-white px-2 py-1 rounded">حذف</button>
+                                </td>
+                            </tr>
+                            <!-- Add more doctor rows as needed -->
+                        </tbody>
+                    </table>
+                    <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded">إضافة طبيب جديد</button>
+                </div>
+            </section>
+
+            <!-- Appointments Section -->
+            <section id="appointments" class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">إدارة المواعيد</h2>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th class="text-right py-2">اسم المريض</th>
+                                <th class="text-right py-2">التاريخ</th>
+                                <th class="text-right py-2">الوقت</th>
+                                <th class="text-right py-2">الطبيب</th>
+                                <th class="text-right py-2">الحالة</th>
+                                <th class="text-right py-2">الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2">محمد علي</td>
+                                <td class="py-2">2024-09-15</td>
+                                <td class="py-2">10:00 ص</td>
+                                <td class="py-2">د. أحمد محمد</td>
+                                <td class="py-2"><span class="bg-green-200 text-green-800 px-2 py-1 rounded">مؤكد</span></td>
+                                <td class="py-2">
+                                    <button class="bg-blue-500 text-white px-2 py-1 rounded mr-2">تعديل</button>
+                                    <button class="bg-red-500 text-white px-2 py-1 rounded">إلغاء</button>
+                                </td>
+                            </tr>
+                            <!-- Add more appointment rows as needed -->
+                        </tbody>
+                    </table>
+                    <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded">إضافة موعد جديد</button>
+                </div>
+            </section>
+
+            <!-- Patients Section -->
+            <section id="patients" class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">إدارة المرضى</h2>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th class="text-right py-2">اسم المريض</th>
+                                <th class="text-right py-2">رقم الهاتف</th>
+                                <th class="text-right py-2">البريد الإلكتروني</th>
+                                <th class="text-right py-2">تاريخ آخر زيارة</th>
+                                <th class="text-right py-2">الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2">فاطمة أحمد</td>
+                                <td class="py-2">0501234567</td>
+                                <td class="py-2">fatima@example.com</td>
+                                <td class="py-2">2024-09-10</td>
+                                <td class="py-2">
+                                    <button class="bg-blue-500 text-white px-2 py-1 rounded mr-2">عرض السجل</button>
+                                    <button class="bg-yellow-500 text-white px-2 py-1 rounded">تعديل</button>
+                                </td>
+                            </tr>
+                            <!-- Add more patient rows as needed -->
+                        </tbody>
+                    </table>
+                    <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded">إضافة مريض جديد</button>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section id="blog" class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">إدارة المدونة</h2>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th class="text-right py-2">عنوان المقال</th>
+                                <th class="text-right py-2">الكاتب</th>
+                                <th class="text-right py-2">تاريخ النشر</th>
+                                <th class="text-right py-2">الحالة</th>
+                                <th class="text-right py-2">الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2">أهمية تنظيف الأسنان يومياً</td>
+                                <td class="py-2">د. سارة محمود</td>
+                                <td class="py-2">2024-09-01</td>
+                                <td class="py-2"><span class="bg-green-200 text-green-800 px-2 py-1 rounded">منشور</span></td>
+                                <td class="py-2">
+                                    <button class="bg-blue-500 text-white px-2 py-1 rounded mr-2">تعديل</button>
+                                    <button class="bg-red-500 text-white px-2 py-1 rounded">حذف</button>
+                                </td>
+                            </tr>
+                            <!-- Add more blog post rows as needed -->
+                        </tbody>
+                    </table>
+                    <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded">إضافة مقال جديد</button>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="mb-6">
+                <h2 class="text-xl font-semibold mb-4">إعدادات الموقع</h2>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <form>
+                        <div class="mb-4">
+                            <label for="site-name" class="block mb-2">اسم الموقع</label>
+                            <input type="text" id="site-name" class="w-full p-2 border rounded" value="عيادة الأسنان">
+                        </div>
+                        <div class="mb-4">
+                            <label for="site-description" class="block mb-2">وصف الموقع</label>
+                            <textarea id="site-description" class="w-full p-2 border rounded" rows="3">عيادة الأسنان المتخصصة في تقديم أفضل خدمات طب الأسنان</textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label for="contact-email" class="block mb-2">البريد الإلكتروني للتواصل</label>
+                            <input type="email" id="contact-email" class="w-full p-2 border rounded" value="info@dentalclinic.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="contact-phone" class="block mb-2">رقم الهاتف للتواصل</label>
+                            <input type="tel" id="contact-phone" class="w-full p-2 border rounded" value="0501234567">
+                        </div>
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">حفظ الإعدادات</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Add any necessary JavaScript for interactivity
+        document.querySelectorAll('aside a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = e.target.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({behavior: 'smooth'});
+            });
+        });
+    </script>
+</body>
+</html>
